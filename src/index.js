@@ -1,5 +1,6 @@
 import "./style/style.sass"
 import * as data from "./data.js"
+import * as colorInput from "./component/colorInput.js"
 
 function setup() {
   data.dom.root = document.getElementById("app-root")
@@ -8,16 +9,13 @@ function setup() {
   data.dom.meta = document.getElementById("meta-container")
 
 
-  data.meta.version = "";
-  data.meta.description = "";
-  data.meta.repositiory = "";
-  data.meta.licence = "";
+  
 
   for(let prop in data.meta) {
     let parent = document.createElement("div");
     parent.setAttribute("class", "option");
 
-    
+
     let p = document.createElement("p");
     p.appendChild(document.createTextNode(prop + ": "));
 
@@ -32,7 +30,6 @@ function setup() {
     parent.appendChild(input);
 
 
-
     data.dom.meta.appendChild(parent);
   }
 
@@ -40,8 +37,12 @@ function setup() {
     atom: ">0.50.0"
   }
   data.meta.private = false;
-  data.meta.name = "";
   data.meta.theme = "syntax";
+
+  for(let color in data.colors) {
+
+    data.dom.color.appendChild(colorInput.newColorPicker(data.colors[color], color))
+  }
 }
 
 setup();

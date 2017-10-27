@@ -1,7 +1,21 @@
 #meta-container
+  width: 90%
+  max-width: 960px
+  margin: 16px auto
   div.option
     input, p
       display: inline-block
       padding: 8px
     input
       border-bottom: 1px solid rgba(#fff, 0.85)
+      background: transparent
+    p
+      width: 200px
+body.light
+  #meta-container
+    input, p
+      color: rgba(#000, 0.85)
+body.dark
+  #meta-container
+    input, p
+      color: rgba(#fff, 0.85)

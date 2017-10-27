@@ -11,6 +11,12 @@ export let colors = {
   green: "#b5bd68",
   red: "#cc6666",
   orange: "#de935f",
-  light-orange: "#f0c674",
+  lightOrange: "#f0c674",
 };
-export let meta = {};
+export let meta = {
+  name: "",
+  version: "",
+  description: "",
+  repositiory: "",
+  licence: "",
+};
