@@ -13,6 +13,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.sass$/,
+      exclude: /node_modules/,
       use: [{
         loader: "style-loader"
       }, {
