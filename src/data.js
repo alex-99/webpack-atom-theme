@@ -14,9 +14,9 @@ export let colors = {
   lightOrange: "#f0c674",
 };
 export let meta = {
-  name: "",
-  version: "",
-  description: "",
+  name: "your-theme",
+  version: "0.0.1",
+  description: "a theme you made",
   repositiory: "",
-  licence: "",
+  licence: "MIT",
 };
